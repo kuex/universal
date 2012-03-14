@@ -6,8 +6,10 @@
 </head>
 
 <body>
-{% cms_toolbar %}
+    {% cms_toolbar %}
     {% placeholder "main" %}
-{% render_block "js" %}
+    {% placeholder base_content %}
+    {% block base_content %}{% endblock %}
+    {% render_block "js" %}
 </body>
 </html>
